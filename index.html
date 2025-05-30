@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa a">K</i>
+                    <div class="logo-text">Konstantin Shalkovskiy</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Protfolio</a></li>
+                        <li><a href="resume_eng.docx" class="btn" download>Resume</a></li>
+                        <li><a href="#" class="btn" id="openModalBtn">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="contactModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>My contacts</h2>
+                    <div class="contact-info">
+                        <div class="phone">
+                            <i class="fa-solid fa-phone"></i> +7-778-898-8797
+                        </div>
+                        <div class="social-links">
+                            <a href="https://wa.me/77788988797" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://t.me/kshalkovskiy" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images./main_photo.png" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Programmer</span></h5>
+                    <h1>Konstantin Shalkovskiy</h1>
+                    <p>I'm a passionate programmer with a focus on Backend Development and DevOps Engineering. With fundamentals and basic growing knowledge, my goal is to gain endless experience doing what I love the most in my favorite routine.
+                    </p>
+                    <div class="btn-group">
+                        <a href="resume_eng.docx" class="btn" download>Download CV</a>
+                        <a href="#" class="btn trigger-modal-from-hero">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://github.com/shalkovk " target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/konstantin-shalkovskiy-531a1b306/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://t.me/kshalkovskiy" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/kshalkov545/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks")
+        var links=document.querySelector(".navlinks li")
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input", {
+            strings: ["Backend Developer", "DevOps Engineer"],
+            typedSpeed: 70,
+            backSpeed: 50,
+            loop: true
+        })
+    </script>
+    <script>
+    const modal = document.getElementById("contactModal");
+    const btn = document.getElementById("openModalBtn");
+    const span = document.querySelector(".close-btn");
+
+    btn.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const heroContactBtn = document.querySelector(".trigger-modal-from-hero");
+        const navContactBtn = document.getElementById("openModalBtn");
+
+        if (heroContactBtn && navContactBtn) {
+            heroContactBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                navContactBtn.click();
+            });
+        }
+        });
+    </script>
+</body>
+</html>
