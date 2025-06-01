@@ -325,6 +325,8 @@ nav .navlinks li a:hover {
 
 }
 
+
+
 @media(max-width: 768px)
 {
     .container {
@@ -335,4 +337,60 @@ nav .navlinks li a:hover {
     .hero-text {
         padding: 40px 60px;
     }
+}
+
+/* projects.html */
+
+.projects-box {
+    width: 1240px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: #333;
+    color: #e5e5e5;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.projects-title {
+    font-size: 2rem;
+    color: #e5e5e5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.projects-list {
+    list-style: none;
+    width: 100%;
+}
+
+.projects-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #555;
+}
+
+.project-name {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+}
+
+.project-link {
+    font-size: 1rem;
+    color: #007ced;
+    background-color: transparent;
+    border: 1px solid #007ced;
+    border-radius: 20px;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #007ced;
+    color: #fff;
 }

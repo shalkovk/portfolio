@@ -6,6 +6,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <div class="hero-header">
@@ -22,7 +24,7 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="#">Protfolio</a></li>
                         <li><a href="resume_eng.docx" class="btn" download>Resume</a></li>
                         <li><a href="#" class="btn" id="openModalBtn">Contact</a></li>
@@ -67,56 +69,5 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
-    <script>
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks")
-        var links=document.querySelector(".navlinks li")
-
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
-
-        var typed=new Typed(".input", {
-            strings: ["Backend Developer", "DevOps Engineer"],
-            typedSpeed: 70,
-            backSpeed: 50,
-            loop: true
-        })
-    </script>
-    <script>
-    const modal = document.getElementById("contactModal");
-    const btn = document.getElementById("openModalBtn");
-    const span = document.querySelector(".close-btn");
-
-    btn.onclick = function(e) {
-        e.preventDefault();
-        modal.style.display = "block";
-    }
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const heroContactBtn = document.querySelector(".trigger-modal-from-hero");
-        const navContactBtn = document.getElementById("openModalBtn");
-
-        if (heroContactBtn && navContactBtn) {
-            heroContactBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-                navContactBtn.click();
-            });
-        }
-        });
-    </script>
 </body>
 </html>
