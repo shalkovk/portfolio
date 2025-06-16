@@ -370,7 +370,7 @@ nav .navlinks li a:hover {
 .projects-list li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 15px 0;
     border-bottom: 1px solid #555;
 }
@@ -393,4 +393,36 @@ nav .navlinks li a:hover {
 .project-link:hover {
     background-color: #007ced;
     color: #fff;
+}
+
+
+.project-section {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #e5e5e5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+}
+
+.project-status {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 4px;
 }
